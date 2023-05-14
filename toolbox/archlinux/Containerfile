@@ -1,0 +1,15 @@
+FROM quay.io/toolbx-images/archlinux-toolbox:latest
+
+LABEL com.github.containers.toolbox="true" \
+  usage="This image is meant to be used with the toolbox or distrobox command" \
+  summary="A Arch Linux image meant for use with Toolbx or Distrobox" \
+  maintainer="scott@ames.sh"
+
+COPY extra-packages /
+
+RUN pacman -Syu --needed --noconfirm - < extra-packages && \
+  printf "LANG=en_US.UTF-8\nLANGUAGE=en_US" | tee /etc/locale.conf && \
+  sed -i '/\#en_US.UTF-8 UTF-8/{s/#//g;s/@/-at-/g;}' /etc/locale.gen && \
+  locale-gen && \
+  rm /extra-packages && \
+  pacman -Scc --noconfirm
