@@ -1,1 +1,32 @@
 # boxes
+
+Misc images (boxes) - primarily intended for use with [distrobox](https://github.com/89luca89/distrobox)
+or [toolbox](https://containertoolbx.org/).
+
+See [packages](https://github.com/scottames?tab=packages&repo_name=boxes) for full list of images.
+
+## Arch
+
+Usage:
+
+```shell
+# distrobox
+distrobox create \
+  --image ghcr.io/scottames/archlinux-toolbox:latest \
+  --name archlinux-toolbox
+```
+
+```shell
+# docker
+docker pull ghcr.io/scottames/archlinux-toolbox:latest
+```
+
+## Verification
+
+All images are signed with sigstore's [cosign](https://docs.sigstore.dev/cosign/overview/)
+
+- To verify the signature download the [cosign.pub key from this repo](cosign.pub) and run:
+
+  ```shell
+  cosign verify --key cosign.pub ghcr.io/scottames/<image>
+  ```
