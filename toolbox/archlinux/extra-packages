@@ -1,12 +1,16 @@
+aws-cli-v2
+base-devel
 curl
 diffutils
 fish
 flatpak-xdg-utils
 git
+gnu-netcat
 gnupg
 go
 keyutils
 lsof
+luacheck
 man-db
 man-pages
 mlocate
@@ -16,6 +20,7 @@ npm
 nss-mdns
 openssh
 pigz
+prettier
 procps-ng
 rsync
 tcpdump
@@ -28,4 +33,5 @@ wget
 wl-clipboard
 words
 xorg-xauth
+yamllint
 zip

@@ -1,3 +1,12 @@
+FROM ubuntu:22.04 as ubuntubuilder
+
+RUN apt-get update \
+  && apt-get install -y build-essential cmake curl g++ git luarocks \
+  && curl -Lo "session-manager-plugin.deb" \
+  "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb" \
+  && dpkg -i "session-manager-plugin.deb" \
+  && luarocks install --server=https://luarocks.org/dev luaformatter
+
 FROM docker.io/library/archlinux:base-devel
 
 LABEL com.github.containers.toolbox="true" \
@@ -18,3 +27,7 @@ RUN pacman -Syu --needed --noconfirm - < extra-packages && \
   pacman -Scc --noconfirm && \
   echo "%wheel ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/toolbox
 
+COPY --from=ubuntubuilder \
+  /usr/local/sessionmanagerplugin/bin/session-manager-plugin \
+  /usr/local/bin/lua-format \
+  /usr/local/bin/
