@@ -9,6 +9,7 @@ gnu-netcat
 gnupg
 go
 keyutils
+libxcrypt-compat
 lsof
 luacheck
 man-db
