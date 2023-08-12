@@ -31,3 +31,16 @@ COPY --from=ubuntubuilder \
   /usr/local/sessionmanagerplugin/bin/session-manager-plugin \
   /usr/local/bin/lua-format \
   /usr/local/bin/
+
+RUN \
+  ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/docker && \
+  ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/flatpak && \
+  ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/hostnamectl && \
+  ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/loginctl && \
+  ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/nmcli && \
+  ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/op && \
+  ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/podman && \
+  ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/rpm-ostree && \
+  ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/transactional-update && \
+  ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/xclip
+
