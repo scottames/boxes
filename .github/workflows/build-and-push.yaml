@@ -7,7 +7,7 @@ on:
       - toolbox/**
       - .github/workflows/build-and-push.yaml
   schedule:
-    - cron: "0 0 * * TUE"
+    - cron: "0 7 * * TUE"
 concurrency: ${{ github.workflow }}
 env:
   REGISTRY_DOMAIN: ghcr.io
