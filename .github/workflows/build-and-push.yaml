@@ -82,7 +82,7 @@ jobs:
       - name: Lowercase Registry
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         id: registry_case
-        uses: ASzc/change-string-case-action@v5
+        uses: ASzc/change-string-case-action@v6
         with:
           string: ${{ env.REGISTRY_DOMAIN }}/${{ env.REGISTRY_OWNER }}
       - name: Push
