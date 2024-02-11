@@ -24,10 +24,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - context: ./toolbox/archlinux
-            image: archlinux-toolbox
-            distro: archlinux
-            image_pretty: Arch Linux - Toolbox
+          - context: ./toolbox/arch
+            image: arch-toolbox
+            image_pretty: Arch - Toolbox
     steps:
       - name: Checkout
         uses: actions/checkout@v4
