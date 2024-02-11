@@ -27,6 +27,9 @@ jobs:
           - context: ./toolbox/arch
             image: arch-toolbox
             image_pretty: Arch - Toolbox
+          - context: ./toolbox/fedora
+            image: fedora-toolbox
+            image_pretty: Fedora - Toolbox
     steps:
       - name: Checkout
         uses: actions/checkout@v4
