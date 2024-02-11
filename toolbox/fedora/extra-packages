@@ -11,6 +11,7 @@ glibc-all-langpacks
 glibc-locale-source
 gnupg2
 gnupg2-smime
+go
 hostname
 iproute
 iputils
@@ -27,6 +28,7 @@ nvidia-vaapi-driver
 openssh-clients
 pam
 passwd
+pciutils
 pinentry
 procps-ng
 ripgrep
