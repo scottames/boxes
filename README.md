@@ -12,13 +12,29 @@ Usage:
 ```shell
 # distrobox
 distrobox create \
-  --image ghcr.io/scottames/archlinux-toolbox:latest \
-  --name archlinux-toolbox
+  --image ghcr.io/scottames/arch-toolbox:latest \
+  --name arch-toolbox
 ```
 
 ```shell
 # docker
-docker pull ghcr.io/scottames/archlinux-toolbox:latest
+docker pull ghcr.io/scottames/arch-toolbox:latest
+```
+
+## Fedora
+
+Usage:
+
+```shell
+# distrobox
+distrobox create \
+  --image ghcr.io/scottames/fedora-toolbox:latest \
+  --name fedora-toolbox
+```
+
+```shell
+# docker
+docker pull ghcr.io/scottames/fedora-toolbox:latest
 ```
 
 ## Verification
