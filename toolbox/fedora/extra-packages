@@ -30,6 +30,7 @@ pam
 passwd
 pciutils
 pinentry
+pipx
 procps-ng
 ripgrep
 rsync

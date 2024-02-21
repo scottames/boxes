@@ -24,6 +24,7 @@ openssh
 pigz
 prettier
 procps-ng
+python-pipx
 rsync
 tcpdump
 time
