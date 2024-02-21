@@ -18,6 +18,7 @@ iputils
 keyutils
 krb5-libs
 less
+libxcrypt-compat
 lsof
 man-db
 man-pages
