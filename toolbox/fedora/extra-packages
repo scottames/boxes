@@ -1,4 +1,5 @@
 adw-gtk3-theme
+awscli
 bash-completion
 bc
 bzip2
@@ -7,6 +8,7 @@ diffutils
 dnf-plugins-core
 findutils
 fish
+git
 glibc-all-langpacks
 glibc-locale-source
 gnupg2
@@ -23,8 +25,10 @@ lsof
 man-db
 man-pages
 mtr
+netcat
 ncurses
 nodejs
+nodejs-npm
 nss-mdns
 nvidia-vaapi-driver
 openssh-clients
@@ -49,7 +53,9 @@ vim
 wget
 which
 whois
+wl-clipboard
 words
 xz
+zenity
 zip
 zsh
