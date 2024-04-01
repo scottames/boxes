@@ -2,7 +2,7 @@ FROM registry.fedoraproject.org/fedora-toolbox:39 AS fedora-distrobox
 
 LABEL com.github.containers.toolbox="true" \
   usage="This image is meant to be used with the toolbox or distrobox command" \
-  summary="A cloud-native terminal experience powered by Fedora" 
+  summary="A cloud-native terminal experience powered by Fedora"
 
 COPY extra-packages /
 
@@ -33,6 +33,7 @@ RUN \
   ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/rpm-ostree && \
   ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/systemctl && \
   ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/transactional-update && \
-  ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/xclip
+  ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/xclip && \
+  ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/xdg-open
 
 RUN rm /extra-packages
