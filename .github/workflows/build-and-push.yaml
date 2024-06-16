@@ -1,13 +1,8 @@
+---
 name: "Build and push images"
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - toolbox/**
-      - .github/workflows/build-and-push.yaml
-  schedule:
-    - cron: "0 7 * * TUE"
+  # yamllint disable-line rule:empty-values
+  workflow_dispatch:
 concurrency: ${{ github.workflow }}
 env:
   REGISTRY_DOMAIN: ghcr.io

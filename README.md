@@ -1,5 +1,9 @@
 # boxes
 
+> [!WARNING]
+> Deprecated: this repository has been deprecated in favor of
+> [github.com/scottames/containers](https://github.com/scottames/containers)
+
 Misc images (boxes) - primarily intended for use with [distrobox](https://github.com/89luca89/distrobox)
 or [toolbox](https://containertoolbx.org/).
 
